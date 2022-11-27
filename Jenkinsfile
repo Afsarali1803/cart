@@ -1,21 +1,24 @@
 @Library('roboshop-shared-library@main') _
 
-pipeline {
-    agent any 
-    stages {
-        stage('Lint check')
-            step {
-                script {
-                    nodejs.lintChecks()
-                }
-            }
-        stage( 'Code Quality Checks' ) {
-            steps{
-                sh "echo Sonarcube"
-            }    
-        }
-    }
-}
+env.COMPONENT="cart"
+nodejs()
+
+// pipeline {
+//     agent any 
+//     stages {
+//         stage('Lint check')
+//             step {
+//                 script {
+//                     nodejs.lintChecks()
+//                 }
+//             }
+//         stage( 'Code Quality Checks' ) {
+//             steps{
+//                 sh "echo Sonarcube"
+//             }    
+//         }
+//     }
+// }
 
 // pipeline {
 //     agent any
