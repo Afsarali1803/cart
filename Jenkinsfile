@@ -3,10 +3,10 @@
 pipeline {
     agent any
     stages {
-        stage ( " Lint check" ) {
+        stage( " Lint check" ) {
             steps {
                 script {
-                    sample.info ()
+                    sample.info('Training', 'facebook.com')
                 }
                 sh "npm i jslint"
                 sh "node_module/jslint/bin/jslint.js server.js || true"
