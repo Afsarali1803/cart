@@ -1,6 +1,6 @@
 @Library('roboshop-shared-library@main') _
 
- nodejs()
+ nodejs(cart)
 
 // pipeline {
 //     agent any 
